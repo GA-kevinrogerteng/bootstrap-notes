@@ -1,0 +1,18 @@
+
+<div id="search_result">
+<h1> Here's your Movie! </h1>
+<%= "<img id='poster' src = #{@result["Poster"]}><br>" %>
+<%= "<p id='plot'><a href =http://imdb.com/title/#{@result['imdbID']}> View IMDB Page</a></p>" %>
+<div id="result"> 
+
+<%= "<p>Plot: #{@result["Plot"]} </p>" %>
+<%= "<p>Released Year: #{@result["Year"]} </p>" %>
+<%= "<p>Rated: #{@result["Rated"]} </p>" %>
+<%= "<p>Released Year: #{@result["Year"]} </p>" %>
+<%= "<p>Runtime: #{@result["Runtime"]} </p>" %>
+<%= "<p>Genre: #{@result["Genre"]} </p>" %>
+<%= "<p>Director: #{@result["Director"]} </p>" %>
+<%= "<p>Actors: #{@result["Actors"]} </p>" %>
+</div>
+</div>
+

@@ -1,0 +1,16 @@
+
+
+<div id="search_page">
+<h1> Choose your movie! </h1>
+<div id="search">		
+<% @result.each do |y|  %>
+
+<%= "<a href=/poster/#{y['imdbID']}><li>#{y["Title"]} ---- #{y["Year"]}</li></a>" %>
+
+<% end %>
+</div>
+</div>
+
+
+
+
