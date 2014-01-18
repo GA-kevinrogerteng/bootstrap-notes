@@ -1,0 +1,40 @@
+.col-xs-12 {
+	height: 100px;
+	background-color: blue;
+	color: white;
+	text-align: center;
+}
+
+.col-xs-6 {
+	height: 100px;
+	background-color: LightSalmon;
+	color: white;
+	text-align: center;
+	border: 2px solid black;
+}
+.col-xs-4 {
+	height: 100px;
+	background-color: green;
+	color: white;
+	text-align: center;
+	border: 2px solid black;
+}
+
+.col-xs-8{
+	height: 100px;
+	background-color: red;
+	color: white;
+	text-align: center;
+	border: 2px solid black;
+}
+
+.footer .col-sm-4 {
+	height: 100px;
+	background-color: purple;
+	color: white;
+	text-align: center;
+	border: 2px solid black;
+}
+body{
+	background-color: black;
+}
