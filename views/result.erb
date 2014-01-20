@@ -11,10 +11,14 @@
 	<h1 class='col-xs-12 welcome'> Here's your Movie! </h1> 
 	</div>
 		<table class="center">
-			<div class="row">
-			<div class= "col-lg-6 posterlg"><%= "<img id='poster' src = #{@result["Poster"]}><br>" %>
-			<%= "<p id='plot'><a href =http://imdb.com/title/#{@result['imdbID']}> View IMDB Page</a></p>" %></div>
-			<div class= "col-lg-6">
+
+			<%if @result['Poster'] == "N/A" %>
+				Oops! Looks like this movie doesn't have a poster... Here's a Pikachu instead!
+				<%= "<img class='none' src='http://i.imgur.com/tCDTHfY.gif>" %>
+			<%else%>
+				<%= "<img id='poster' src = #{@result["Poster"]}><br>" %>
+			<%end%>
+			<tr><%= "<p id='plot'><td>IMDB Link:</td><td><a href =http://imdb.com/title/#{@result['imdbID']}> View IMDB Page</a></td></p>" %></tr>
 			<tr><%= "<p><td>Plot:</td><td>#{@result["Plot"]}</td></p>" %></tr>
 			<tr><%= "<p><td>Released Year:</td><td> #{@result["Year"]}</td></p>" %></tr>
 			<tr><%= "<p><td>Rated:</td><td> #{@result["Rated"]}</td></p>" %></tr>
@@ -22,8 +26,8 @@
 			<tr><%= "<p><td>Runtime:</td><td> #{@result["Runtime"]}</td></p>" %></tr>
 			<tr><%= "<p><td>Genre:</td><td> #{@result["Genre"]}</td></p>" %></tr>
 			<tr><%= "<p><td>Director:</td><td> #{@result["Director"]}</td></p>" %></tr>
-			<tr><%= "<p><td>Actors:</td><td>#{@result["Actors"]}</td></p>" %></tr></div>
-		</div>
+			<tr><%= "<p><td>Actors:</td><td>#{@result["Actors"]}</td></p>" %></tr>
+
 		</table>
 		<a href="/"> New Search </a>
 		<div class= "row footer">
