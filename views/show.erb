@@ -1,20 +1,37 @@
 
 <div class="container">
-<h1 class='col-xs-12 welcome'> Choose your movie! </h1>
 	<div class='row'>
-		<div class='col-xs-12 test'>
-			<table>
-				<tr>
-					<th> Movie> </th>
-					<th> Year </th>
-				<% @result.each do |y|  %>
-				<%= "<td><a href=/poster/#{y['imdbID']}>#{y["Title"]}</td></a><td>#{y["Year"]}</td>" %>
-				</tr>
-				<% end %>
-				
-			</table>
-		</div>
+		<div class='col-xs-6 col-sm-8 topleft'><a href="http://imdb.com"> Powered by IMDB </a> </div>
+		<div class="col-sm-1"></div>
+		<div class="col-sm-1"></div>
+		<div class='col-xs-3 col-sm-1 topright'>Favorites</div>
+		<div class='col-xs-3 col-sm-1 topright'>Profile</div>
 	</div>
+	<div class="row">
+		<h1 class='col-xs-12 welcome'> Choose your movie! </h1>
+	</div>
+			<table class="center">
+				<tr>
+					<th> Movie</th>
+					<th> Year </th>
+				</tr>
+					<% @result.each do |y|  %>
+						<tr>
+							<%= "<td><a href=/poster/#{y['imdbID']}>#{y["Title"]}</td></a><td>#{y["Year"]}</td>" %>
+						</tr>	
+							<% end %>
+			</table>
+				<div class= "row footer">
+					<div class="col-sm-4 col-md-4 col-lg-3 page"> Contact Me Soon!</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 page">
+						View My Page
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 page">
+						Support Page
+					</div>
+					<div class="col-lg-3 page">
+						<p class="visible-lg">Like Me!</p>
+				</div>
 </div>
 
 
