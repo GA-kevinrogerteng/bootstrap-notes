@@ -1,14 +1,20 @@
 
-
-<div id="search_page">
-<h1> Choose your movie! </h1>
-<div id="search">		
-<% @result.each do |y|  %>
-
-<%= "<a href=/poster/#{y['imdbID']}><li>#{y["Title"]} ---- #{y["Year"]}</li></a>" %>
-
-<% end %>
-</div>
+<div class="container">
+<h1 class='col-xs-12 welcome'> Choose your movie! </h1>
+	<div class='row'>
+		<div class='col-xs-12 test'>
+			<table>
+				<tr>
+					<th> Movie> </th>
+					<th> Year </th>
+				<% @result.each do |y|  %>
+				<%= "<td><a href=/poster/#{y['imdbID']}>#{y["Title"]}</td></a><td>#{y["Year"]}</td>" %>
+				</tr>
+				<% end %>
+				
+			</table>
+		</div>
+	</div>
 </div>
 
 
